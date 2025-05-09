@@ -2,17 +2,17 @@ import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
 
 // IMPORT STYLES
-import { styles } from "./src/styles/styles";
+import { styles } from "../bromitas/src/styles/styles";
 
 // IMPORT COMPONENTS
 //Importanto segundo componente function
-import { SecondComponent } from "./src/components/SecondComponent";
+import { SecondComponent } from "../bromitas/src/components/parts";
 
 //Dando um nome para importar alguns componentes dentro do arquivo de componentes
-import Componentes from "./src/components/SecondComponent";
+import Componentes from "../bromitas/src/components/parts";
 
 //Importanto segundo componente const arrow function
-import { Teste } from "./src/components/SecondComponent";
+import { Teste } from "./src/components/SecondComponent/parts";
 
 export default function App() {
   return (
