@@ -1,10 +1,8 @@
 import { Text, TouchableOpacity } from "react-native";
-import { View } from "react-native";
 
-// Assim é por function direto!
-export default function TouchComponent({ funClickBtn, text }) {
+export default function TouchComponent({ funcClickBtn, text }) {
   return (
-    <TouchableOpacity onPress={funClickBtn}>
+    <TouchableOpacity onPress={funcClickBtn}>
       <Text>{text}</Text>
     </TouchableOpacity>
   );
