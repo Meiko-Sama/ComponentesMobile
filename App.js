@@ -1,41 +1,26 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 
 // IMPORT STYLES
 import { styles } from "./src/styles/styles";
 
 // IMPORT COMPONENTS
-//Importanto segundo componente function
-import { SecondComponent } from "./src/components/SecondComponent";
-
-//Dando um nome para importar alguns componentes dentro do arquivo de componentes
-import Componentes from "./src/components/SecondComponent";
-
-//Importanto segundo componente const arrow function
-import { Teste } from "./src/components/SecondComponent";
+import TouchComponent from "./src/components/buttons/TouchComponents";
 
 export default function App() {
+  const saveBtn = () => {
+    alert("Salvar!");
+  };
+
+  const cancelBtn = () => {
+    alert("Cancelar!");
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.divestrofe}>
-        <View style={styles.divtitulo}>
-          <Text style={styles.titulo}>10 indiozinhos</Text>
-        </View>
-        <Componentes.primeiro />
-        <Componentes.segundo />
-        <Componentes.terceiro />
-        <Componentes.quarto />
-      </View>
-      <StatusBar style="auto" />
+      <Text>HELLO WORLD!</Text>
+      <TouchComponent funcClickBtn={saveBtn} text="Salvar" />
+      <TouchComponent funcClickBtn={cancelBtn} text="Cancelar" />
     </View>
   );
 }
-
-// Chamando esse componente dentro do arquivo
-const FirstComponent = () => {
-  return (
-    <View>
-      <Text> Teste KKKKK!! </Text>
-    </View>
-  );
-};
